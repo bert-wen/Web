@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="time">2020-08-26</div>
+    <ul>
+        <li>pink老师牛逼</li>
+        <li>pink老师牛逼</li>
+        <li>pink老师牛逼</li>
+        <li>pink老师牛逼</li>
+        <li>pink老师牛逼</li>
+    </ul>
+    <ol id='ol'>
+        <li>pink老师牛逼</li>
+        <li>pink老师牛逼</li>
+        <li>pink老师牛逼</li>
+        <li>pink老师牛逼</li>
+    </ol>
+    <div class="box">盒子</div>
+    <div class="box">盒子</div>
+    <div id="nav">
+        <li>首页</li>
+        <li>产品</li>
+    </div>
+    <script>
+        //1、 通过ID选择
+        // ID选择返回的是一个element对象
+        // 括号里面是字符串
+        var timer = document.getElementById('time');
+        // 检查是否成功获取
+        console.log(timer);
+        // 打印返回的属性和方法
+        console.dir(timer);
+
+
+        // 2、通过标签名获取
+        // 返回的是获取元素对象的集合伪数组，有length，可以像数组一样遍历
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        // 通过父元素获取标签
+        var ol = document.getElementById('ol');
+        var lis = ol.getElementsByTagName('li');
+        console.log(lis);
+
+
+        // 3、根据类名获得元素
+        // 获取的是伪数组
+        var boxs = document.getElementsByClassName('box');
+        console.log(boxs);
+
+
+        // 4、返回指定选择器的第一个对象
+        var firstbox = document.querySelector('.box');
+        console.log(firstbox);
+        var nav = document.querySelector('#nav');
+        console.log(nav);
+
+
+
+        //5、 返回指定选择去的所有元素对象的集合
+        var allbox = document.querySelectorAll('.box');
+        console.log(allbox);
+
+
+
+        // 6、获取body元素
+        // 返回的是一个元素对象
+        var bodyEle = document.body;
+        console.log(bodyEle);
+
+
+        //7、 获取html元素
+        var htmlEle = document.documentElement;
+        console.log(htmlEle);
+    </script>
+</body>
+
+</html>
